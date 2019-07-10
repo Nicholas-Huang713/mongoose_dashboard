@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mongoose Dashboard | New Animal</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container text-center">
+       <h2>Create a New Animal</h2> 
+       <% if(messages.validation) { %>
+            <% for (var x of messages.validation) { %>
+                <h4><%= x %></h4>
+            <% } %>
+        <% } %>
+        
+       <form action="/mongooses" method="POST">
+           <h4>Name: <input type="text" name="name"></h4>
+           <h4>Animal: <input type="text" name="animal"></h4>
+           <button>Submit</button>
+       </form>
+
+    </div>
+</body>
+</html>

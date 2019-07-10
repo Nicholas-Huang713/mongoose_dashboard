@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mongoose Dashboard | Show Animal</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container-fluid text-center">
+        <h2> Animal Info</h2>
+        <h3>My name is <%= animals.name %> and I am a <%= animals.animal %></h3>
+        <h4> <a href="/mongooses/edit/<%= animals.id %>">Edit</a> 
+            <form action="/mongooses/destroy/<%= animals.id %>" method="POST">
+            <button>Delete</button>
+            </form>
+            
+    </div>
+</body>
+</html>
